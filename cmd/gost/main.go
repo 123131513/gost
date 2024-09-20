@@ -17,6 +17,16 @@ import (
 	"github.com/judwhite/go-svc"
 )
 
+type stringList []string
+
+func (l *stringList) String() string {
+	return fmt.Sprintf("%s", *l)
+}
+func (l *stringList) Set(value string) error {
+	*l = append(*l, value)
+	return nil
+}
+
 var (
 	cfgFile      string
 	outputFormat string
@@ -63,7 +73,9 @@ func worker(id int, args []string, ctx *context.Context, ret *int) {
 	cmd.Stderr = os.Stderr
 	cmd.Env = append(os.Environ(), fmt.Sprintf("_GOST_ID=%d", id))
 
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatal(err)
+	}
 	if cmd.ProcessState.Exited() {
 		*ret = cmd.ProcessState.ExitCode()
 	}

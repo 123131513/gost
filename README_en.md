@@ -2,6 +2,8 @@
 
 ### A simple security tunnel written in golang
 
+[![en](https://img.shields.io/badge/English%20README-green)](README_en.md) [![zh](https://img.shields.io/badge/Chinese%20README-gray)](README.md)
+
 ## Features
 
 - [x] [Listening on multiple ports](https://gost.run/en/getting-started/quick-start/)
@@ -20,7 +22,7 @@
 - [x] [Prometheus metrics](https://gost.run/en/tutorials/metrics/)
 - [x] [Dynamic configuration](https://gost.run/en/tutorials/api/config/)
 - [x] [Web API](https://gost.run/en/tutorials/api/overview/)
-- [ ] Web UI
+- [x] [GUI](https://github.com/go-gost/gostctl)/[WebUI](https://github.com/go-gost/gost-ui)
 
 ## Overview
 
@@ -77,6 +79,16 @@ go build
 docker run --rm gogost/gost -V
 ```
 
+## Tools
+
+### GUI
+
+[go-gost/gostctl](https://github.com/go-gost/gostctl)
+
+### WebUI
+
+[go-gost/gost-ui](https://github.com/go-gost/gost-ui)
+
 ### Shadowsocks Android
 
 [xausky/ShadowsocksGostPlugin](https://github.com/xausky/ShadowsocksGostPlugin)
@@ -84,6 +96,8 @@ docker run --rm gogost/gost -V
 ## Support
 
 Wiki: [https://gost.run](https://gost.run/en/)
+
+YouTube: [https://www.youtube.com/@gost-tunnel](https://www.youtube.com/@gost-tunnel)
 
 Telegram: [https://t.me/gogost](https://t.me/gogost)
 
